@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">STYLENEST</string>
+    <string name="welcome_title">Discover your style</string>
+    <string name="welcome_subtitle">Curated urban wear for the bold</string>
+    <string name="search_hint">Search products...</string>
+    <string name="seasonal_sale">SEASONAL\nSALE</string>
+    <string name="shop_now">Shop Now</string>
+    <string name="discount_tag">Up to 50% Off</string>
+    <string name="new_arrivals">New Arrivals</string>
+    <string name="view_all">View all</string>
+    <string name="categories_title">Categories</string>
+    <string name="cart_title">Shopping Cart</string>
+    <string name="total_label">Total:</string>
+    <string name="checkout_btn">Checkout</string>
+    <string name="order_history">Order History</string>
+    <string name="payment_methods">Payment Methods</string>
+    <string name="logout">Logout</string>
+    <string name="place_order">Place Order</string>
+    <string name="select_size">Select Size</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="style_rewards">Style Rewards</string>
+    <string name="style_quiz">Personal Style Quiz</string>
+    <string name="daily_inspiration">Daily Style Inspiration</string>
+    <string name="get_inspired">Get Inspired</string>
+    <string name="products_title">Products</string>
+    <string name="sort_label">Sort</string>
+    <string name="content_description_sort">Sort products</string>
+    <string name="virtual_try_on">Virtual Try-On Closet</string>
+    <string name="size_profile">Size Profile</string>
+    <string name="wishlist">My Wishlist</string>
+</resources>

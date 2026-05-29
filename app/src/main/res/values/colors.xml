@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Core Neutrals -->
+    <color name="black">#1A1C1E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_pure">#FFFFFF</color>
+
+    <!-- Brand Gold Palette -->
+    <color name="brand_gold">#BFA046</color>
+    <color name="brand_gold_light">#F4EFE0</color>
+    <color name="brand_gold_dark">#8C7230</color>
+
+    <!-- Refined Accents -->
+    <color name="charcoal">#2D2D2D</color>
+    <color name="gray_light">#F8F9FA</color>
+    <color name="gray_medium">#E9ECEF</color>
+    <color name="gray_dark">#6C757D</color>
+
+    <!-- Functional -->
+    <color name="surface_variant">#F5F5F5</color>
+    <color name="sale_red">#D32F2F</color>
+
+    <!-- Legacy support (keeping for stability but mapped to new style) -->
+    <color name="brand_blue">#1A1C1E</color> <!-- Replaced with black/charcoal for classy look -->
+    <color name="brand_blue_light">#F4EFE0</color> <!-- Replaced with gold light -->
+</resources>

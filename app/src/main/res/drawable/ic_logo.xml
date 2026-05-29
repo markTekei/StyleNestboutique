@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Spiral Logo Shape (Brand Gold) -->
+    <path
+        android:fillColor="@color/brand_gold"
+        android:pathData="M100,100m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0" />
+
+    <path
+        android:fillColor="@color/brand_gold"
+        android:pathData="M100,90c0,0 20,-40 60,-30c0,0 -30,10 -40,30z
+                          M110,100c0,0 40,20 30,60c0,0 -10,-30 -30,-40z
+                          M100,110c0,0 -20,40 -60,30c0,0 30,-10 40,-30z
+                          M90,100c0,0 -40,-20 -30,-60c0,0 10,30 30,40z
+                          M107,93c0,0 40,-10 50,30c0,0 -25,-15 -50,-20z
+                          M107,107c0,0 10,40 -30,50c0,0 15,-25 20,-50z
+                          M93,107c0,0 -40,10 -50,-30c0,0 25,15 50,20z
+                          M93,93c0,0 -10,-40 30,-50c0,0 -15,25 -20,50z" />
+
+    <!-- STYLENEST Text (Brand Gold) - Stylized with paths -->
+    <group android:translateX="34" android:translateY="160" android:scaleX="0.6" android:scaleY="0.6">
+        <!-- S -->
+        <path android:fillColor="@color/brand_gold" android:pathData="M10,10 h15 v2 h-13 v2 h13 v2 h-15 v-2 h13 v-2 h-13 z" />
+        <!-- T -->
+        <path android:fillColor="@color/brand_gold" android:pathData="M28,10 h13 v2 h-5.5 v10 h-2 v-10 h-5.5 z" />
+        <!-- Y -->
+        <path android:fillColor="@color/brand_gold" android:pathData="M45,10 l4.5,5 l4.5,-5 h2 l-5.5,6 v6 h-2 v-6 l-5.5,-6 z" />
+        <!-- L -->
+        <path android:fillColor="@color/brand_gold" android:pathData="M60,10 v12 h9 v-2 h-7 v-10 z" />
+        <!-- E -->
+        <path android:fillColor="@color/brand_gold" android:pathData="M72,10 v12 h9 v-2 h-7 v-3 h5 v-2 h-5 v-3 h7 v-2 z" />
+        <!-- N -->
+        <path android:fillColor="@color/brand_gold" android:pathData="M85,10 v12 h2 l5,-7 v7 h2 v-12 h-2 l-5,7 v-7 z" />
+        <!-- E -->
+        <path android:fillColor="@color/brand_gold" android:pathData="M98,10 v12 h9 v-2 h-7 v-3 h5 v-2 h-5 v-3 h7 v-2 z" />
+        <!-- S -->
+        <path android:fillColor="@color/brand_gold" android:pathData="M110,10 h15 v2 h-13 v2 h13 v2 h-15 v-2 h13 v-2 h-13 z" />
+        <!-- T -->
+        <path android:fillColor="@color/brand_gold" android:pathData="M128,10 h13 v2 h-5.5 v10 h-2 v-10 h-5.5 z" />
+    </group>
+
+</vector>

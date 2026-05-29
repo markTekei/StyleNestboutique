@@ -1,0 +1,66 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme with Material 3 -->
+    <style name="Base.Theme.StyleNestBoutique" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand colors - Refined Gold & Charcoal -->
+        <item name="colorPrimary">@color/brand_gold</item>
+        <item name="colorOnPrimary">@color/white_pure</item>
+        <item name="colorPrimaryContainer">@color/brand_gold_light</item>
+        <item name="colorOnPrimaryContainer">@color/brand_gold_dark</item>
+
+        <!-- Secondary/Accent colors - Using Charcoal for a classy look -->
+        <item name="colorSecondary">@color/charcoal</item>
+        <item name="colorOnSecondary">@color/white_pure</item>
+        <item name="colorSecondaryContainer">@color/gray_medium</item>
+        <item name="colorOnSecondaryContainer">@color/black</item>
+
+        <!-- Background and Surface -->
+        <item name="android:windowBackground">@color/white_pure</item>
+        <item name="colorSurface">@color/white_pure</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="colorSurfaceVariant">@color/gray_light</item>
+        <item name="colorOnSurfaceVariant">@color/gray_dark</item>
+        <item name="colorOutline">@color/gray_medium</item>
+        <item name="colorOutlineVariant">@color/gray_medium</item>
+
+        <!-- Status and Navigation Bars -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+
+        <!-- Material Components Styles -->
+        <item name="materialButtonStyle">@style/StyleNest.Button</item>
+        <item name="chipStyle">@style/StyleNest.Chip</item>
+    </style>
+
+    <style name="Theme.StyleNestBoutique" parent="Base.Theme.StyleNestBoutique" />
+
+    <!-- Modern Splash Screen Theme -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white_pure</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.StyleNestBoutique</item>
+    </style>
+
+    <!-- Classy Component Styles -->
+    <style name="StyleNest.Button" parent="Widget.Material3.Button">
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="StyleNest.Chip" parent="Widget.Material3.Chip.Assist">
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Small</item>
+    </style>
+
+    <!-- Custom Typography -->
+    <style name="StyleNest.TextAppearance.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="StyleNest.TextAppearance.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+</resources>

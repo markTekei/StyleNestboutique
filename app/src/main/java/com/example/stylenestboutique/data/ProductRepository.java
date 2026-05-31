@@ -24,6 +24,11 @@ public class ProductRepository {
         if (!products.isEmpty()) return;
 
         // =========================
+        // FEATURED / SALE TOP ITEM (Matches Banner)
+        // =========================
+        products.add(new Product("Classic Leather Sneakers", CATEGORY_SHOES, 4500, "Timeless white sneakers with premium finish.", R.drawable.shoes, true, "40"));
+
+        // =========================
         // MEN'S WEAR
         // =========================
         products.add(new Product("Packers Varsity Jacket", CATEGORY_MEN, 7200, "Classic blue and white Packers varsity jacket.", R.drawable.wood1, false, "L"));
@@ -58,7 +63,6 @@ public class ProductRepository {
         // SHOES
         // =========================
         products.add(new Product("Elite Runner Sneakers", CATEGORY_SHOES, 6200, "High-performance sneakers.", R.drawable.s1, true, "42"));
-        products.add(new Product("Classic Leather Sneakers", CATEGORY_SHOES, 4500, "Timeless white sneakers.", R.drawable.shoes, false, "40"));
         products.add(new Product("Urban High-Tops", CATEGORY_SHOES, 5500, "Street-style high-tops.", R.drawable.shoes2, true, "43"));
         products.add(new Product("Chelsea Suede Boots", CATEGORY_SHOES, 7200, "Classic suede boots.", R.drawable.boot1, true, "41"));
         products.add(new Product("Premium Leather Boots", CATEGORY_SHOES, 7500, "High-quality leather boots.", R.drawable.boot2, false, "44"));
@@ -101,11 +105,11 @@ public class ProductRepository {
 
     public static List<Category> getCategoriesWithImages() {
         List<Category> categories = new ArrayList<>();
-        categories.add(new Category(CATEGORY_MEN, R.drawable.wood1)); // Packers Varsity Jacket
-        categories.add(new Category(CATEGORY_WOMEN, R.drawable.b)); // Premium Business Blazer
-        categories.add(new Category(CATEGORY_KIDS, "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=800")); // Denim Jacket
-        categories.add(new Category(CATEGORY_SHOES, R.drawable.s1)); // Elite Runner Sneakers
-        categories.add(new Category(CATEGORY_ACCESSORIES, R.drawable.watch1)); // Chrono Silver Watch
+        categories.add(new Category(CATEGORY_MEN, R.drawable.wood1));
+        categories.add(new Category(CATEGORY_WOMEN, R.drawable.b));
+        categories.add(new Category(CATEGORY_KIDS, "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=800"));
+        categories.add(new Category(CATEGORY_SHOES, R.drawable.s1));
+        categories.add(new Category(CATEGORY_ACCESSORIES, R.drawable.watch1));
         return categories;
     }
 
@@ -150,5 +154,12 @@ public class ProductRepository {
             if (p.getName().toLowerCase().contains(q)) results.add(p);
         }
         return results;
+    }
+
+    public static Product getProductByName(String name) {
+        for (Product p : products) {
+            if (p.getName().equalsIgnoreCase(name)) return p;
+        }
+        return null;
     }
 }

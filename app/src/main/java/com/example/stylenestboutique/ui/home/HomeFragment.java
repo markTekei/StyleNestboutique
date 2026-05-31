@@ -15,7 +15,6 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import com.bumptech.glide.Glide;
 import com.example.stylenestboutique.R;
 import com.example.stylenestboutique.data.CartManager;
 import com.example.stylenestboutique.data.ProductRepository;
@@ -49,41 +48,15 @@ public class HomeFragment extends Fragment implements
         setupCategories();
         loadProducts();
         setupSearch();
-        setupBanner();
+
+        // REVERSED: Banner now opens the full sale list as it was originally
+        binding.shopNowButton.setOnClickListener(v -> {
+            Bundle args = new Bundle();
+            args.putBoolean("only_sale", true);
+            Navigation.findNavController(v).navigate(R.id.action_home_to_list, args);
+        });
 
         binding.sortButton.setOnClickListener(this::showSortMenu);
-    }
-
-    private void setupBanner() {
-        List<Product> saleProducts = ProductRepository.getSaleProducts();
-        if (!saleProducts.isEmpty()) {
-            Product featured = saleProducts.get(0);
-            
-            // Sync banner text and image with the first sale product
-            binding.bannerTitle.setText(featured.getName().toUpperCase().replace(" ", "\n"));
-            
-            Object imageSource = featured.getImageUrl() != null ? featured.getImageUrl() : featured.getImageResource();
-            Glide.with(this)
-                    .load(imageSource)
-                    .centerCrop()
-                    .into(binding.bannerProductImage);
-
-            // Clicking "Shop Now" or the banner itself opens this specific product
-            View.OnClickListener featuredClick = v -> {
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("product", featured);
-                Navigation.findNavController(v).navigate(R.id.action_home_to_detail, bundle);
-            };
-
-            binding.shopNowButton.setOnClickListener(featuredClick);
-            binding.bannerCard.setOnClickListener(featuredClick);
-        } else {
-            binding.shopNowButton.setOnClickListener(v -> {
-                Bundle args = new Bundle();
-                args.putBoolean("only_sale", true);
-                Navigation.findNavController(v).navigate(R.id.action_home_to_list, args);
-            });
-        }
     }
 
     private void loadProducts() {

@@ -18,7 +18,7 @@
         <item name="colorSurface">@color/black</item>
         <item name="colorOnSurface">@color/white_pure</item>
         <item name="colorSurfaceVariant">@color/charcoal</item>
-        <item name="colorOnSurfaceVariant">@color/gray_medium</item>
+        <item name="colorOnSurfaceVariant">@color/white_pure</item> <!-- Forced to white for high visibility in dark mode -->
         <item name="colorOutline">@color/gray_dark</item>
         <item name="colorOutlineVariant">@color/charcoal</item>
 
@@ -31,5 +31,19 @@
         <!-- Material Components Styles -->
         <item name="materialButtonStyle">@style/StyleNest.Button</item>
         <item name="chipStyle">@style/StyleNest.Chip</item>
+
+        <!-- Forced Bold Typography across all common roles for Visibility -->
+        <item name="textAppearanceHeadlineLarge">@style/StyleNest.TextAppearance.Headline.Bold</item>
+        <item name="textAppearanceHeadlineMedium">@style/StyleNest.TextAppearance.Headline.Bold</item>
+        <item name="textAppearanceHeadlineSmall">@style/StyleNest.TextAppearance.Headline.Bold</item>
+        <item name="textAppearanceTitleLarge">@style/StyleNest.TextAppearance.Title.Bold</item>
+        <item name="textAppearanceTitleMedium">@style/StyleNest.TextAppearance.Title.Bold</item>
+        <item name="textAppearanceTitleSmall">@style/StyleNest.TextAppearance.Title.Bold</item>
+        <item name="textAppearanceBodyLarge">@style/StyleNest.TextAppearance.Body.Bold</item>
+        <item name="textAppearanceBodyMedium">@style/StyleNest.TextAppearance.Body.Bold</item>
+        <item name="textAppearanceBodySmall">@style/StyleNest.TextAppearance.Body.Bold</item>
+        <item name="textAppearanceLabelLarge">@style/StyleNest.TextAppearance.Body.Bold</item>
+        <item name="textAppearanceLabelMedium">@style/StyleNest.TextAppearance.Body.Bold</item>
+        <item name="textAppearanceLabelSmall">@style/StyleNest.TextAppearance.Body.Bold</item>
     </style>
 </resources>

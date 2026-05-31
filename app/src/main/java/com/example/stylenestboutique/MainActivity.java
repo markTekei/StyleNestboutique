@@ -1,8 +1,12 @@
 package com.example.stylenestboutique;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.graphics.Insets;
 import androidx.core.splashscreen.SplashScreen;
 import androidx.core.view.ViewCompat;
@@ -21,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Initialize Theme before super.onCreate to prevent flickering
+        applySavedTheme();
+
         // Modern Feature: Material You Dynamic Colors
         DynamicColors.applyToActivitiesIfAvailable(this.getApplication());
         
@@ -39,6 +46,15 @@ public class MainActivity extends AppCompatActivity {
         // Reactive Cart Badge
         updateCartBadge();
         CartManager.getInstance().setListener(newCount -> updateCartBadge());
+    }
+
+    private void applySavedTheme() {
+        SharedPreferences prefs = getSharedPreferences("theme_prefs", Context.MODE_PRIVATE);
+        if (prefs.contains("is_dark_mode")) {
+            boolean isDark = prefs.getBoolean("is_dark_mode", false);
+            AppCompatDelegate.setDefaultNightMode(isDark ? 
+                    AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO);
+        }
     }
 
     public void updateCartBadge() {

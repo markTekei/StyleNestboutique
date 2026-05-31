@@ -35,6 +35,13 @@ public class CartManager {
         }
     }
 
+    public void removeProduct(Product product) {
+        cartItems.remove(product);
+        if (listener != null) {
+            listener.onCartChanged(cartItems.size());
+        }
+    }
+
     public List<Product> getCartItems() {
         return cartItems;
     }

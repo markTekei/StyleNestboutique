@@ -26,8 +26,8 @@ import java.util.List;
 public class ProductListFragment extends Fragment implements ProductAdapter.OnProductClickListener {
 
     private FragmentProductListBinding binding;
-    private List<Product> productList;
-    private List<Product> originalList;
+    private List<Product> productList = new ArrayList<>(); // Initialize to avoid null
+    private List<Product> originalList = new ArrayList<>();
     private ProductAdapter adapter;
 
     @Nullable
@@ -66,14 +66,21 @@ public class ProductListFragment extends Fragment implements ProductAdapter.OnPr
     }
 
     private void refreshData(String category, boolean onlySale) {
+        List<Product> newData;
         if (onlySale) {
-            originalList = ProductRepository.getSaleProducts();
+            newData = ProductRepository.getSaleProducts();
         } else if (category != null) {
-            originalList = ProductRepository.getProductsByCategory(category);
+            newData = ProductRepository.getProductsByCategory(category);
         } else {
-            originalList = ProductRepository.getAllProducts();
+            newData = ProductRepository.getAllProducts();
         }
-        productList = new ArrayList<>(originalList);
+        
+        originalList.clear();
+        originalList.addAll(newData);
+        
+        productList.clear();
+        productList.addAll(originalList);
+        
         if (adapter != null) {
             adapter.notifyDataSetChanged();
         }
@@ -144,7 +151,6 @@ public class ProductListFragment extends Fragment implements ProductAdapter.OnPr
 
     @Override
     public void onProductLongClick(Product product, View view) {
-        // Admin Options Menu
         PopupMenu adminMenu = new PopupMenu(getContext(), view);
         String stockAction = product.isOutOfStock() ? "Mark as In Stock" : "Mark as Out of Stock";
         adminMenu.getMenu().add(stockAction);

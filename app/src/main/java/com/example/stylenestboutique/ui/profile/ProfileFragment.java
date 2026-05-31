@@ -1,5 +1,8 @@
 package com.example.stylenestboutique.ui.profile;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.HapticFeedbackConstants;
 import android.view.LayoutInflater;
@@ -9,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import com.example.stylenestboutique.R;
@@ -28,7 +32,27 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        setupThemeSwitch();
         setupClickListeners();
+    }
+
+    private void setupThemeSwitch() {
+        SharedPreferences prefs = requireContext().getSharedPreferences("theme_prefs", Context.MODE_PRIVATE);
+        
+        // Initial state from preferences, fallback to system setting if never set
+        int currentNightMode = getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+        boolean isDarkMode = prefs.getBoolean("is_dark_mode", currentNightMode == Configuration.UI_MODE_NIGHT_YES);
+
+        binding.themeSwitch.setChecked(isDarkMode);
+
+        binding.themeSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            prefs.edit().putBoolean("is_dark_mode", isChecked).apply();
+            AppCompatDelegate.setDefaultNightMode(isChecked ? 
+                    AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO);
+            
+            String mode = isChecked ? "Dark" : "Light";
+            Toast.makeText(getContext(), mode + " Mode Enabled", Toast.LENGTH_SHORT).show();
+        });
     }
 
     private void setupClickListeners() {

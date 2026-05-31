@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.stylenestboutique.R;
+import com.example.stylenestboutique.data.CartManager;
 import com.example.stylenestboutique.databinding.ItemProductBinding;
 import com.example.stylenestboutique.model.Product;
 import java.util.List;
@@ -33,8 +34,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         holder.binding.productName.setText(product.getName());
         holder.binding.productPrice.setText("KES " + String.format(Locale.US, "%,.0f", product.getPrice()));
         
-        // Hide sale tag in cart for a cleaner look unless specifically needed
         holder.binding.saleTag.setVisibility(View.GONE);
+        holder.binding.wishlistButton.setVisibility(View.GONE);
         
         Object imageSource = product.getImageUrl() != null ? product.getImageUrl() : product.getImageResource();
         
@@ -45,11 +46,13 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
                 .centerCrop()
                 .into(holder.binding.productImage);
         
-        // Use the quick add button as a "remove" button or hide it for a cleaner cart
         if (holder.binding.addToCartQuick != null) {
             holder.binding.addToCartQuick.setImageResource(android.R.drawable.ic_menu_delete);
             holder.binding.addToCartQuick.setAlpha(0.6f);
-            // Implementation for removal would go here
+            holder.binding.addToCartQuick.setOnClickListener(v -> {
+                CartManager.getInstance().removeProduct(product);
+                notifyDataSetChanged();
+            });
         }
     }
 

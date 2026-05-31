@@ -24,7 +24,7 @@ public class ProductRepository {
         if (!products.isEmpty()) return;
 
         // =========================
-        // MEN'S WEAR (Prices: 500 - 7500)
+        // MEN'S WEAR
         // =========================
         products.add(new Product("Packers Varsity Jacket", CATEGORY_MEN, 7200, "Classic blue and white Packers varsity jacket.", R.drawable.wood1, false, "L"));
         products.add(new Product("Angels Varsity Jacket", CATEGORY_MEN, 6800, "Stylish green and white Angels varsity jacket.", R.drawable.wood2, true, "M"));
@@ -38,9 +38,12 @@ public class ProductRepository {
         products.add(new Product("Tech-Fleece Hoodie", CATEGORY_MEN, 4800, "Warm and lightweight fleece hoodie.", R.drawable.track1, true, "S"));
         products.add(new Product("Athletic Jogger Pants", CATEGORY_MEN, 3200, "Comfortable joggers for training.", R.drawable.track2, false, "M"));
         products.add(new Product("Premium Crew Sweatshirt", CATEGORY_MEN, 3500, "Soft cotton sweatshirt.", R.drawable.sweatshirt1, false, "XL"));
+        
+        products.add(new Product("Modern Utility Jacket", CATEGORY_MEN, 5200, "Functional jacket for all seasons.", R.drawable.j1, true, "M"));
+        products.add(new Product("Minimalist Wool Sweater", CATEGORY_MEN, 3800, "Warm cream knit sweater.", R.drawable.sweatshirt2, false, "L"));
 
         // =========================
-        // WOMEN'S WEAR (Prices: 500 - 7500)
+        // WOMEN'S WEAR
         // =========================
         products.add(new Product("Premium Business Blazer", CATEGORY_WOMEN, 6500, "Sharp executive blazer.", R.drawable.b, false, "M"));
         products.add(new Product("Executive Navy Blazer", CATEGORY_WOMEN, 6800, "Classic navy blue blazer.", R.drawable.b1, true, "S"));
@@ -50,11 +53,9 @@ public class ProductRepository {
         products.add(new Product("Vibrant Floral Summer Dress", CATEGORY_WOMEN, 4800, "Colorful floral pattern.", R.drawable.summerfloral1, false, "M"));
         products.add(new Product("Evening Silk Gown", CATEGORY_WOMEN, 7500, "Elegant silk gown.", R.drawable.evesilk, false, "L"));
         products.add(new Product("Midnight Silk Evening Gown", CATEGORY_WOMEN, 7500, "Stunning midnight black silk gown.", R.drawable.evesilk1, true, "S"));
-        products.add(new Product("Modern Utility Jacket", CATEGORY_WOMEN, 5200, "Functional jacket for all seasons.", R.drawable.j1, true, "M"));
-        products.add(new Product("Minimalist Wool Sweater", CATEGORY_WOMEN, 3800, "Warm cream knit sweater.", R.drawable.sweatshirt2, false, "L"));
 
         // =========================
-        // SHOES (Prices: 500 - 7500)
+        // SHOES
         // =========================
         products.add(new Product("Elite Runner Sneakers", CATEGORY_SHOES, 6200, "High-performance sneakers.", R.drawable.s1, true, "42"));
         products.add(new Product("Classic Leather Sneakers", CATEGORY_SHOES, 4500, "Timeless white sneakers.", R.drawable.shoes, false, "40"));
@@ -64,9 +65,10 @@ public class ProductRepository {
         products.add(new Product("Rugged Trail Boots", CATEGORY_SHOES, 6800, "Durable boots for adventures.", R.drawable.boot3, true, "42"));
         products.add(new Product("Pro Court Basketball Shoes", CATEGORY_SHOES, 6500, "Maximum support for the court.", R.drawable.s2, false, "45"));
         products.add(new Product("Lightweight Trail Runners", CATEGORY_SHOES, 5200, "Durable off-road shoes.", R.drawable.s3, false, "40"));
+        products.add(new Product("Junior Pro Sneakers", CATEGORY_SHOES, 3500, "Stylish sneakers for little feet.", "https://images.unsplash.com/photo-1514989940723-e8e51635b782?q=80&w=800", true, "32"));
 
         // =========================
-        // ACCESSORIES (Prices: 500 - 7500)
+        // ACCESSORIES
         // =========================
         products.add(new Product("Chrono Silver Watch", CATEGORY_ACCESSORIES, 4500, "Luxury stainless steel timepiece.", R.drawable.watch1, false, "One Size"));
         products.add(new Product("Midnight Edition Watch", CATEGORY_ACCESSORIES, 4800, "Sleek all-black designer watch.", R.drawable.watch2, true, "One Size"));
@@ -82,11 +84,9 @@ public class ProductRepository {
         products.add(new Product("Aviator Style Sunglasses", CATEGORY_ACCESSORIES, 2200, "Classic aviators.", R.drawable.sunglass2, false, "Standard"));
 
         // =========================
-        // KIDS' WEAR (Prices: 500 - 7500)
+        // KIDS' WEAR
         // =========================
-        products.add(new Product("Boy's Classic Blue Shorts", CATEGORY_KIDS, 1200, "Comfortable cotton shorts for active boys.", "https://images.unsplash.com/photo-1519457431-75f1446a6f6f?q=80&w=800", true, "4Y"));
         products.add(new Product("Denim Adventure Jacket", CATEGORY_KIDS, 3200, "Durable denim for kids.", "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=800", false, "6Y"));
-        products.add(new Product("Junior Pro Sneakers", CATEGORY_KIDS, 3500, "Stylish sneakers for little feet.", "https://images.unsplash.com/photo-1514989940723-e8e51635b782?q=80&w=800", true, "32"));
     }
 
     public static List<String> getCategories() {
@@ -101,12 +101,11 @@ public class ProductRepository {
 
     public static List<Category> getCategoriesWithImages() {
         List<Category> categories = new ArrayList<>();
-        categories.add(new Category(CATEGORY_MEN, R.drawable.wood1));
-        categories.add(new Category(CATEGORY_WOMEN, R.drawable.b));
-        // Updated Kids category cover photo to Denim adventure jacket image
-        categories.add(new Category(CATEGORY_KIDS, "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=800"));
-        categories.add(new Category(CATEGORY_SHOES, R.drawable.s1));
-        categories.add(new Category(CATEGORY_ACCESSORIES, R.drawable.watch1));
+        categories.add(new Category(CATEGORY_MEN, R.drawable.wood1)); // Packers Varsity Jacket
+        categories.add(new Category(CATEGORY_WOMEN, R.drawable.b)); // Premium Business Blazer
+        categories.add(new Category(CATEGORY_KIDS, "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=800")); // Denim Jacket
+        categories.add(new Category(CATEGORY_SHOES, R.drawable.s1)); // Elite Runner Sneakers
+        categories.add(new Category(CATEGORY_ACCESSORIES, R.drawable.watch1)); // Chrono Silver Watch
         return categories;
     }
 

@@ -1,38 +1,37 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme with Material 3 -->
+    <!-- Base application theme with Material 3 - Premium Blue Edition -->
     <style name="Base.Theme.StyleNestBoutique" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Primary brand colors - Refined Gold & Charcoal -->
-        <item name="colorPrimary">@color/brand_gold_dark</item> <!-- Darker gold for better visibility in light mode -->
+        <!-- Primary brand colors - Professional Blue -->
+        <item name="colorPrimary">@color/primary_blue</item>
         <item name="colorOnPrimary">@color/white_pure</item>
-        <item name="colorPrimaryContainer">@color/brand_gold_light</item>
-        <item name="colorOnPrimaryContainer">@color/brand_gold_dark</item>
+        <item name="colorPrimaryContainer">@color/secondary_blue</item>
+        <item name="colorOnPrimaryContainer">@color/primary_blue_dark</item>
 
-        <!-- Secondary/Accent colors - Using Charcoal for a classy look -->
-        <item name="colorSecondary">@color/charcoal</item>
+        <!-- Secondary/Accent colors -->
+        <item name="colorSecondary">@color/primary_blue_dark</item>
         <item name="colorOnSecondary">@color/white_pure</item>
-        <item name="colorSecondaryContainer">@color/gray_medium</item>
-        <item name="colorOnSecondaryContainer">@color/black</item>
+        <item name="colorSecondaryContainer">@color/secondary_blue</item>
+        <item name="colorOnSecondaryContainer">@color/text_main</item>
 
-        <!-- Background and Surface -->
-        <item name="android:windowBackground">@color/white_pure</item>
-        <item name="colorSurface">@color/white_pure</item>
-        <item name="colorOnSurface">@color/black</item>
-        <item name="colorSurfaceVariant">@color/gray_light</item>
-        <item name="colorOnSurfaceVariant">@color/black</item> <!-- Forced to dark/black for visibility -->
-        <item name="colorOutline">@color/gray_medium</item>
-        <item name="colorOutlineVariant">@color/gray_medium</item>
+        <!-- Background and Surface - Premium Blue Theme -->
+        <item name="android:windowBackground">@color/app_bg_blue</item>
+        <item name="colorSurface">@color/app_bg_blue</item>
+        <item name="colorOnSurface">@color/text_main</item>
+        <item name="colorSurfaceVariant">@color/secondary_blue</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="colorOutline">@color/primary_blue</item>
 
         <!-- Status and Navigation Bars -->
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/primary_blue</item>
+        <item name="android:navigationBarColor">@color/app_bg_blue</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
 
         <!-- Material Components Styles -->
         <item name="materialButtonStyle">@style/StyleNest.Button</item>
         <item name="chipStyle">@style/StyleNest.Chip</item>
 
-        <!-- Forced Bold Typography across all common roles for Visibility -->
+        <!-- Typography colors adjusted for Blue Theme -->
         <item name="textAppearanceHeadlineLarge">@style/StyleNest.TextAppearance.Headline.Bold</item>
         <item name="textAppearanceHeadlineMedium">@style/StyleNest.TextAppearance.Headline.Bold</item>
         <item name="textAppearanceHeadlineSmall">@style/StyleNest.TextAppearance.Headline.Bold</item>
@@ -51,38 +50,41 @@
 
     <!-- Modern Splash Screen Theme -->
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/white_pure</item>
+        <item name="windowSplashScreenBackground">@color/primary_blue</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
         <item name="postSplashScreenTheme">@style/Theme.StyleNestBoutique</item>
     </style>
 
     <!-- Classy Component Styles -->
     <style name="StyleNest.Button" parent="Widget.Material3.Button">
-        <item name="cornerRadius">8dp</item>
+        <item name="android:backgroundTint">@color/primary_blue</item>
+        <item name="android:textColor">@color/white_pure</item>
+        <item name="cornerRadius">12dp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="StyleNest.Chip" parent="Widget.Material3.Chip.Assist">
-        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Small</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Medium</item>
         <item name="android:textStyle">bold</item>
+        <item name="chipBackgroundColor">@color/white_pure</item>
     </style>
 
     <!-- Custom Bold Typography -->
     <style name="StyleNest.TextAppearance.Headline.Bold" parent="TextAppearance.Material3.HeadlineMedium">
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/brand_gold_dark</item> <!-- Brand choice but dark -->
+        <item name="android:textColor">@color/primary_blue</item>
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
     <style name="StyleNest.TextAppearance.Title.Bold" parent="TextAppearance.Material3.TitleLarge">
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textColor">@color/text_main</item>
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
     <style name="StyleNest.TextAppearance.Body.Bold" parent="TextAppearance.Material3.BodyMedium">
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textColor">@color/text_main</item>
         <item name="android:fontFamily">sans-serif</item>
     </style>
 </resources>

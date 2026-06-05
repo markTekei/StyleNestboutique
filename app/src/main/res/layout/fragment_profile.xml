@@ -16,7 +16,7 @@
             android:id="@+id/header_bg"
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:background="@color/brand_gold_light"
+            android:background="@color/secondary_blue"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.imageview.ShapeableImageView
@@ -32,7 +32,7 @@
             app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
             app:strokeColor="?attr/colorSurface"
             app:strokeWidth="4dp"
-            app:tint="@color/brand_gold" />
+            app:tint="?attr/colorPrimary" />
 
         <TextView
             android:id="@+id/user_name"
@@ -41,7 +41,7 @@
             android:layout_marginTop="16dp"
             android:text="Style Enthusiast"
             android:textAppearance="?attr/textAppearanceHeadlineSmall"
-            android:textColor="@color/brand_gold_dark"
+            android:textColor="?attr/colorOnSurface"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -71,7 +71,7 @@
                     android:layout_marginEnd="8dp"
                     android:text="Eco-Warrior"
                     app:chipIcon="@drawable/ic_home"
-                    app:chipIconTint="@color/brand_gold" />
+                    app:chipIconTint="?attr/colorPrimary" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/badge_trend"
@@ -81,16 +81,16 @@
                     android:layout_marginEnd="8dp"
                     android:text="Trendsetter"
                     app:chipIcon="@drawable/ic_dress"
-                    app:chipIconTint="@color/brand_gold" />
+                    app:chipIconTint="?attr/colorPrimary" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/badge_loyal"
                     style="@style/Widget.Material3.Chip.Assist"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Gold Member"
+                    android:text="Premium Member"
                     app:chipIcon="@drawable/ic_cart"
-                    app:chipIconTint="@color/brand_gold" />
+                    app:chipIconTint="?attr/colorPrimary" />
             </LinearLayout>
         </HorizontalScrollView>
 
@@ -120,7 +120,8 @@
                     android:gravity="start|center_vertical"
                     android:text="My Wishlist"
                     app:icon="@drawable/ic_dress"
-                    app:iconPadding="16dp" />
+                    app:iconPadding="16dp"
+                    app:iconTint="?attr/colorPrimary" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/virtual_try_on_button"
@@ -130,7 +131,8 @@
                     android:gravity="start|center_vertical"
                     android:text="Virtual Try-On"
                     app:icon="@drawable/ic_dress"
-                    app:iconPadding="16dp" />
+                    app:iconPadding="16dp"
+                    app:iconTint="?attr/colorPrimary" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/size_profile_button"
@@ -140,7 +142,8 @@
                     android:gravity="start|center_vertical"
                     android:text="Size Profile"
                     app:icon="@drawable/ic_shirt"
-                    app:iconPadding="16dp" />
+                    app:iconPadding="16dp"
+                    app:iconTint="?attr/colorPrimary" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/order_history_button"
@@ -150,7 +153,8 @@
                     android:gravity="start|center_vertical"
                     android:text="Order History"
                     app:icon="@drawable/ic_home"
-                    app:iconPadding="16dp" />
+                    app:iconPadding="16dp"
+                    app:iconTint="?attr/colorPrimary" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/style_rewards_button"
@@ -160,7 +164,8 @@
                     android:gravity="start|center_vertical"
                     android:text="Style Rewards"
                     app:icon="@drawable/ic_cart"
-                    app:iconPadding="16dp" />
+                    app:iconPadding="16dp"
+                    app:iconTint="?attr/colorPrimary" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/style_quiz_button"
@@ -170,7 +175,8 @@
                     android:gravity="start|center_vertical"
                     android:text="Style Quiz"
                     app:icon="@drawable/ic_shirt"
-                    app:iconPadding="16dp" />
+                    app:iconPadding="16dp"
+                    app:iconTint="?attr/colorPrimary" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/payment_methods_button"
@@ -180,7 +186,8 @@
                     android:gravity="start|center_vertical"
                     android:text="Payment Methods"
                     app:icon="@drawable/ic_cart"
-                    app:iconPadding="16dp" />
+                    app:iconPadding="16dp"
+                    app:iconTint="?attr/colorPrimary" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/admin_dashboard_button"
@@ -190,7 +197,8 @@
                     android:gravity="start|center_vertical"
                     android:text="Admin Dashboard"
                     app:icon="@drawable/ic_profile"
-                    app:iconPadding="16dp" />
+                    app:iconPadding="16dp"
+                    app:iconTint="?attr/colorPrimary" />
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>

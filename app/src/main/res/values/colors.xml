@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Core Neutrals -->
-    <color name="black">#1A1C1E</color>
+    <!-- Vibrant Modern Blue Palette -->
+    <color name="app_bg_blue">#E3F2FD</color> <!-- Soft Sky Blue Background -->
+    <color name="primary_blue">#1976D2</color> <!-- Vibrant Blue -->
+    <color name="primary_blue_dark">#1565C0</color>
+    <color name="secondary_blue">#BBDEFB</color> <!-- Soft Blue for cards/chips -->
+
+    <!-- Brand Gold Palette (Legacy/Accent) -->
+    <color name="brand_gold">#D4AF37</color>
+    <color name="brand_gold_light">#F3E5AB</color>
+    <color name="brand_gold_dark">#996515</color>
+
+    <!-- Neutral Palette with Blue Tints -->
+    <color name="black">#0D1B2A</color> <!-- Deep Navy/Black -->
     <color name="white">#FFFFFF</color>
     <color name="white_pure">#FFFFFF</color>
+    <color name="off_white">#F8FAFC</color>
+    <color name="charcoal">#333333</color>
+    <color name="gray_dark">#757575</color>
 
-    <!-- Brand Gold Palette -->
-    <color name="brand_gold">#BFA046</color>
-    <color name="brand_gold_light">#F4EFE0</color>
-    <color name="brand_gold_dark">#8C7230</color>
-
-    <!-- Refined Accents -->
-    <color name="charcoal">#2D2D2D</color>
-    <color name="gray_light">#F8F9FA</color>
-    <color name="gray_medium">#E9ECEF</color>
-    <color name="gray_dark">#6C757D</color>
+    <!-- High Contrast Text -->
+    <color name="text_main">#0D47A1</color> <!-- Deep Blue for Headings -->
+    <color name="text_secondary">#455A64</color> <!-- Blue-Grey for secondary text -->
 
     <!-- Functional -->
-    <color name="surface_variant">#F5F5F5</color>
-    <color name="sale_red">#D32F2F</color>
-
-    <!-- Legacy support (keeping for stability but mapped to new style) -->
-    <color name="brand_blue">#1A1C1E</color> <!-- Replaced with black/charcoal for classy look -->
-    <color name="brand_blue_light">#F4EFE0</color> <!-- Replaced with gold light -->
+    <color name="sale_red">#FF5252</color>
+    <color name="success_green">#4CAF50</color>
 </resources>

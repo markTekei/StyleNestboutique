@@ -51,7 +51,7 @@
                 app:layout_constraintBottom_toTopOf="@id/detail_card"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/detail_card"
-                app:tint="@color/brand_gold" />
+                app:tint="?attr/colorPrimary" />
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/detail_card"
@@ -85,7 +85,7 @@
                         android:layout_marginTop="8dp"
                         android:text="KES 4,500"
                         android:textAppearance="?attr/textAppearanceTitleLarge"
-                        android:textColor="@color/brand_gold"
+                        android:textColor="?attr/colorPrimary"
                         android:textStyle="bold" />
 
                     <View

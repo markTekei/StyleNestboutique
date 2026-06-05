@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/brand_gold" />
+        app:tint="?attr/colorPrimary" />
 
     <TextView
         android:id="@+id/title"
@@ -84,7 +84,7 @@
         android:text="Login"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:backgroundTint="?attr/colorSecondary"
+        app:backgroundTint="?attr/colorPrimary"
         app:cornerRadius="12dp"
         app:layout_constraintTop_toBottomOf="@id/password_layout" />
 
@@ -95,7 +95,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="Don't have an account? Sign Up"
-        android:textColor="@color/brand_gold"
+        android:textColor="?attr/colorPrimary"
         app:layout_constraintTop_toBottomOf="@id/login_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

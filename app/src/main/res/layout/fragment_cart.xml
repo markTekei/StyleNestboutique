@@ -66,7 +66,7 @@
                     android:layout_height="wrap_content"
                     android:text="KES 0.00"
                     android:textAppearance="?attr/textAppearanceTitleLarge"
-                    android:textColor="@color/brand_gold"
+                    android:textColor="?attr/colorPrimary"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -76,9 +76,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="20dp"
-                android:backgroundTint="?attr/colorSecondary"
+                android:backgroundTint="?attr/colorPrimary"
                 android:text="@string/checkout_btn"
-                android:textColor="?attr/colorOnSecondary"
+                android:textColor="?attr/colorOnPrimary"
                 app:cornerRadius="12dp" />
 
         </LinearLayout>

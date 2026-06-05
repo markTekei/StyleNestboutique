@@ -82,7 +82,7 @@
             android:src="@drawable/ic_dress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/brand_gold" />
+            app:tint="?attr/colorPrimary" />
 
         <TextView
             android:id="@+id/product_name"
@@ -109,7 +109,7 @@
             android:layout_marginTop="2dp"
             android:text="KES 4,500"
             android:textAppearance="?attr/textAppearanceBodyMedium"
-            android:textColor="@color/brand_gold"
+            android:textColor="?attr/colorPrimary"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/product_name" />
@@ -125,7 +125,7 @@
             app:layout_constraintBottom_toBottomOf="@id/product_price"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/product_price"
-            app:tint="@color/brand_gold" />
+            app:tint="?attr/colorPrimary" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

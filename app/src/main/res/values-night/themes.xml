@@ -1,49 +1,36 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme for Night mode -->
     <style name="Base.Theme.StyleNestBoutique" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Primary brand colors - Gold -->
+        <!-- Brand Identity -->
         <item name="colorPrimary">@color/brand_gold</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnPrimary">@color/charcoal</item>
+
         <item name="colorPrimaryContainer">@color/brand_gold_dark</item>
         <item name="colorOnPrimaryContainer">@color/brand_gold_light</item>
 
-        <!-- Secondary/Accent colors - Off-white/Gray for dark mode -->
-        <item name="colorSecondary">@color/white_pure</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <item name="colorSecondaryContainer">@color/charcoal</item>
-        <item name="colorOnSecondaryContainer">@color/white_pure</item>
+        <item name="colorSecondary">@color/brand_gold_light</item>
+        <item name="colorOnSecondary">@color/charcoal</item>
 
-        <!-- Background and Surface -->
+        <!-- Surfaces and Backgrounds (Brightened for legibility) -->
         <item name="android:windowBackground">@color/black</item>
-        <item name="colorSurface">@color/black</item>
-        <item name="colorOnSurface">@color/white_pure</item>
-        <item name="colorSurfaceVariant">@color/charcoal</item>
-        <item name="colorOnSurfaceVariant">@color/white_pure</item> <!-- Forced to white for high visibility in dark mode -->
-        <item name="colorOutline">@color/gray_dark</item>
-        <item name="colorOutlineVariant">@color/charcoal</item>
+        <item name="colorSurface">#1E1E1E</item> <!-- Lighter Charcoal -->
+        <item name="colorOnSurface">@color/off_white</item>
+        <item name="colorSurfaceVariant">#2C2C2C</item> <!-- Distinct Surface -->
+        <item name="colorOnSurfaceVariant">@color/gray_light</item>
+        <item name="colorOutline">@color/brand_gold_dark</item>
+        <item name="colorError">#FF8A80</item>
 
         <!-- Status and Navigation Bars -->
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
 
-        <!-- Material Components Styles -->
         <item name="materialButtonStyle">@style/StyleNest.Button</item>
         <item name="chipStyle">@style/StyleNest.Chip</item>
+    </style>
 
-        <!-- Forced Bold Typography across all common roles for Visibility -->
-        <item name="textAppearanceHeadlineLarge">@style/StyleNest.TextAppearance.Headline.Bold</item>
-        <item name="textAppearanceHeadlineMedium">@style/StyleNest.TextAppearance.Headline.Bold</item>
-        <item name="textAppearanceHeadlineSmall">@style/StyleNest.TextAppearance.Headline.Bold</item>
-        <item name="textAppearanceTitleLarge">@style/StyleNest.TextAppearance.Title.Bold</item>
-        <item name="textAppearanceTitleMedium">@style/StyleNest.TextAppearance.Title.Bold</item>
-        <item name="textAppearanceTitleSmall">@style/StyleNest.TextAppearance.Title.Bold</item>
-        <item name="textAppearanceBodyLarge">@style/StyleNest.TextAppearance.Body.Bold</item>
-        <item name="textAppearanceBodyMedium">@style/StyleNest.TextAppearance.Body.Bold</item>
-        <item name="textAppearanceBodySmall">@style/StyleNest.TextAppearance.Body.Bold</item>
-        <item name="textAppearanceLabelLarge">@style/StyleNest.TextAppearance.Body.Bold</item>
-        <item name="textAppearanceLabelMedium">@style/StyleNest.TextAppearance.Body.Bold</item>
-        <item name="textAppearanceLabelSmall">@style/StyleNest.TextAppearance.Body.Bold</item>
+    <!-- Splash Screen Theme -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/black</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.StyleNestBoutique</item>
     </style>
 </resources>

@@ -5,50 +5,42 @@
     android:viewportWidth="200"
     android:viewportHeight="200">
 
-    <!-- STYLENEST Text (Brand Gold) -->
-    <group
-        android:translateX="34"
-        android:translateY="30">
-        <!-- S -->
-        <path android:fillColor="@color/brand_gold" android:pathData="M10,10 h15 v2 h-13 v2 h13 v2 h-15 v-2 h13 v-2 h-13 z" />
-        <!-- T -->
-        <path android:fillColor="@color/brand_gold" android:pathData="M28,10 h13 v2 h-5.5 v10 h-2 v-10 h-5.5 z" />
-        <!-- Y -->
-        <path android:fillColor="@color/brand_gold" android:pathData="M45,10 l4.5,5 l4.5,-5 h2 l-5.5,6 v6 h-2 v-6 l-5.5,-6 z" />
-        <!-- L -->
-        <path android:fillColor="@color/brand_gold" android:pathData="M60,10 v12 h9 v-2 h-7 v-10 z" />
-        <!-- E -->
-        <path android:fillColor="@color/brand_gold" android:pathData="M72,10 v12 h9 v-2 h-7 v-3 h5 v-2 h-5 v-3 h7 v-2 z" />
-        <!-- N -->
-        <path android:fillColor="@color/brand_gold" android:pathData="M85,10 v12 h2 l5,-7 v7 h2 v-12 h-2 l-5,7 v-7 z" />
-        <!-- E -->
-        <path android:fillColor="@color/brand_gold" android:pathData="M98,10 v12 h9 v-2 h-7 v-3 h5 v-2 h-5 v-3 h7 v-2 z" />
-        <!-- S -->
-        <path android:fillColor="@color/brand_gold" android:pathData="M110,10 h15 v2 h-13 v2 h13 v2 h-15 v-2 h13 v-2 h-13 z" />
-        <!-- T -->
-        <path android:fillColor="@color/brand_gold" android:pathData="M128,10 h13 v2 h-5.5 v10 h-2 v-10 h-5.5 z" />
-    </group>
+    <!-- Ornate Monogram Crest (Gold) for Splash -->
 
-    <!-- Spiral Logo Shape (Brand Gold) -->
-    <group
-        android:translateY="30"
-        android:scaleX="0.7"
-        android:scaleY="0.7"
-        android:pivotX="100"
-        android:pivotY="100">
-        <path
-            android:fillColor="@color/brand_gold"
-            android:pathData="M100,100m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0" />
-        <path
-            android:fillColor="@color/brand_gold"
-            android:pathData="M100,90c0,0 20,-40 60,-30c0,0 -30,10 -40,30z
-                              M110,100c0,0 40,20 30,60c0,0 -10,-30 -30,-40z
-                              M100,110c0,0 -20,40 -60,30c0,0 30,-10 40,-30z
-                              M90,100c0,0 -40,-20 -30,-60c0,0 10,30 30,40z
-                              M107,93c0,0 40,-10 50,30c0,0 -25,-15 -50,-20z
-                              M107,107c0,0 10,40 -30,50c0,0 15,-25 20,-50z
-                              M93,107c0,0 -40,10 -50,-30c0,0 25,15 50,20z
-                              M93,93c0,0 -10,-40 30,-50c0,0 -15,25 -20,50z" />
-    </group>
+    <!-- Outer Decorative Ring -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="@color/brand_gold"
+        android:strokeWidth="1.5"
+        android:pathData="M100,45 A55,55 0 1,1 100,155 A55,55 0 1,1 100,45" />
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="@color/brand_gold"
+        android:strokeWidth="0.8"
+        android:pathData="M100,48 A52,52 0 1,1 100,152 A52,52 0 1,1 100,48" />
+
+    <!-- Central Serif 'A' -->
+    <path
+        android:fillColor="@color/brand_gold"
+        android:pathData="M100,65 L125,130 H115 L108,112 H92 L85,130 H75 L100,65 Z M100,82 L95,105 H105 L100,82 Z" />
+
+    <!-- Top Ornate Flourish -->
+    <path
+        android:fillColor="@color/brand_gold"
+        android:pathData="M100,35 C95,35 90,42 100,48 C110,42 105,35 100,35 Z" />
+    <path
+        android:fillColor="@color/brand_gold"
+        android:pathData="M100,32 L103,40 L100,43 L97,40 Z" />
+
+    <!-- Bottom Ornate Flourish -->
+    <path
+        android:fillColor="@color/brand_gold"
+        android:pathData="M100,145 C80,145 60,155 50,170 C65,160 85,155 100,155 C115,155 135,160 150,170 C140,155 120,145 100,145 Z" />
+    <path
+        android:fillColor="@color/brand_gold"
+        android:pathData="M100,152 C90,152 80,158 75,165 C85,158 95,155 100,155 C105,155 115,158 125,165 C120,158 110,152 100,152 Z" />
+    <path
+        android:fillColor="@color/brand_gold"
+        android:pathData="M100,148 L105,158 L100,165 L95,158 Z" />
 
 </vector>

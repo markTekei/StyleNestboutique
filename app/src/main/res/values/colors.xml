@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Vibrant Modern Blue Palette -->
-    <color name="app_bg_blue">#E3F2FD</color> <!-- Soft Sky Blue Background -->
-    <color name="primary_blue">#1976D2</color> <!-- Vibrant Blue -->
-    <color name="primary_blue_dark">#1565C0</color>
-    <color name="secondary_blue">#BBDEFB</color> <!-- Soft Blue for cards/chips -->
+    <!-- Premium Midnight & Gold Palette -->
+    <color name="primary_navy">#1A2238</color>
+    <color name="primary_navy_dark">#0F1421</color>
+    <color name="primary_navy_light">#2A334D</color>
 
-    <!-- Brand Gold Palette (Legacy/Accent) -->
-    <color name="brand_gold">#D4AF37</color>
-    <color name="brand_gold_light">#F3E5AB</color>
+    <color name="brand_gold">#D4AF37</color> <!-- Champagne Gold -->
+    <color name="brand_gold_light">#E8D196</color>
     <color name="brand_gold_dark">#996515</color>
 
-    <!-- Neutral Palette with Blue Tints -->
-    <color name="black">#0D1B2A</color> <!-- Deep Navy/Black -->
+    <!-- Neutrals -->
+    <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="white_pure">#FFFFFF</color>
-    <color name="off_white">#F8FAFC</color>
-    <color name="charcoal">#333333</color>
-    <color name="gray_dark">#757575</color>
+    <color name="off_white">#F5F5F5</color>
+    <color name="background_cream">#FDFCF0</color>
 
-    <!-- High Contrast Text -->
-    <color name="text_main">#0D47A1</color> <!-- Deep Blue for Headings -->
-    <color name="text_secondary">#455A64</color> <!-- Blue-Grey for secondary text -->
+    <color name="charcoal">#121212</color>
+    <color name="surface_dark">#1E1E1E</color>
+    <color name="gray_dark">#424242</color>
+    <color name="gray_light">#BDBDBD</color>
+
+    <!-- Text -->
+    <color name="text_main">#1A2238</color>
+    <color name="text_secondary">#757575</color>
 
     <!-- Functional -->
-    <color name="sale_red">#FF5252</color>
-    <color name="success_green">#4CAF50</color>
+    <color name="sale_red">#B71C1C</color>
+    <color name="success_green">#2E7D32</color>
 </resources>

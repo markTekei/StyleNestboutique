@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FA">
+    android:background="@color/primary_navy">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="32dp">
 
-        <!-- Header - Premium Navy -->
+        <!-- Header - Premium Gold Contrast -->
         <View
             android:id="@+id/header_bg"
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:background="@color/primary_navy"
+            android:background="@color/brand_gold"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.imageview.ShapeableImageView
@@ -24,15 +24,15 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_marginTop="120dp"
-            android:padding="4dp"
-            android:src="@drawable/ic_profile"
+            android:padding="2dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
             app:strokeColor="#FFFFFF"
-            app:strokeWidth="4dp"
-            app:tint="@color/brand_gold" />
+            app:strokeWidth="4dp" />
 
         <TextView
             android:id="@+id/user_name"
@@ -41,7 +41,7 @@
             android:layout_marginTop="16dp"
             android:text="Style Enthusiast"
             android:textAppearance="?attr/textAppearanceTitleLarge"
-            android:textColor="@color/primary_navy"
+            android:textColor="#FFFFFF"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +72,7 @@
                     android:text="Eco-Warrior"
                     android:textColor="#FFFFFF"
                     android:textStyle="bold"
-                    app:chipBackgroundColor="@color/brand_gold"
+                    app:chipBackgroundColor="@color/primary_navy_light"
                     app:chipIcon="@drawable/ic_home"
                     app:chipIconTint="#FFFFFF"
                     app:chipStrokeWidth="0dp" />
@@ -86,7 +86,7 @@
                     android:text="Trendsetter"
                     android:textColor="#FFFFFF"
                     android:textStyle="bold"
-                    app:chipBackgroundColor="@color/brand_gold"
+                    app:chipBackgroundColor="@color/primary_navy_light"
                     app:chipIcon="@drawable/ic_dress"
                     app:chipIconTint="#FFFFFF"
                     app:chipStrokeWidth="0dp" />
@@ -99,161 +99,148 @@
                     android:text="Premium Member"
                     android:textColor="#FFFFFF"
                     android:textStyle="bold"
-                    app:chipBackgroundColor="@color/brand_gold"
+                    app:chipBackgroundColor="@color/primary_navy_light"
                     app:chipIcon="@drawable/ic_cart"
                     app:chipIconTint="#FFFFFF"
                     app:chipStrokeWidth="0dp" />
             </LinearLayout>
         </HorizontalScrollView>
 
-        <!-- Main Navigation Section - Filled Navy Buttons with White Text -->
-        <LinearLayout
-            android:id="@+id/menu_container"
+        <!-- Main Navigation Section - Premium Navy Cards with Gold Icons and White Text -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/menu_card"
+            style="?attr/materialCardViewElevatedStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="16dp"
-            android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@id/badges_scroll">
+            app:cardBackgroundColor="@color/primary_navy_light"
+            app:cardCornerRadius="24dp"
+            app:layout_constraintTop_toBottomOf="@id/badges_scroll"
+            app:strokeWidth="0dp">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/wishlist_button"
-                style="@style/Widget.Material3.Button"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginBottom="12dp"
-                android:gravity="start|center_vertical"
-                android:text="My Wishlist"
-                android:textAppearance="?attr/textAppearanceTitleMedium"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                app:backgroundTint="@color/primary_navy"
-                app:cornerRadius="16dp"
-                app:icon="@drawable/ic_dress"
-                app:iconPadding="16dp"
-                app:iconTint="#FFFFFF" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/virtual_try_on_button"
-                style="@style/Widget.Material3.Button"
-                android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginBottom="12dp"
-                android:gravity="start|center_vertical"
-                android:text="Virtual Try-On"
-                android:textAppearance="?attr/textAppearanceTitleMedium"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                app:backgroundTint="@color/primary_navy"
-                app:cornerRadius="16dp"
-                app:icon="@drawable/ic_dress"
-                app:iconPadding="16dp"
-                app:iconTint="#FFFFFF" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/wishlist_button"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="start|center_vertical"
+                    android:text="My Wishlist"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_dress"
+                    app:iconPadding="16dp"
+                    app:iconTint="@color/brand_gold" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/size_profile_button"
-                style="@style/Widget.Material3.Button"
-                android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginBottom="12dp"
-                android:gravity="start|center_vertical"
-                android:text="Size Profile"
-                android:textAppearance="?attr/textAppearanceTitleMedium"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                app:backgroundTint="@color/primary_navy"
-                app:cornerRadius="16dp"
-                app:icon="@drawable/ic_shirt"
-                app:iconPadding="16dp"
-                app:iconTint="#FFFFFF" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/virtual_try_on_button"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="start|center_vertical"
+                    android:text="Virtual Try-On"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_dress"
+                    app:iconPadding="16dp"
+                    app:iconTint="@color/brand_gold" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/order_history_button"
-                style="@style/Widget.Material3.Button"
-                android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginBottom="12dp"
-                android:gravity="start|center_vertical"
-                android:text="Order History"
-                android:textAppearance="?attr/textAppearanceTitleMedium"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                app:backgroundTint="@color/primary_navy"
-                app:cornerRadius="16dp"
-                app:icon="@drawable/ic_home"
-                app:iconPadding="16dp"
-                app:iconTint="#FFFFFF" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/size_profile_button"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="start|center_vertical"
+                    android:text="Size Profile"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_shirt"
+                    app:iconPadding="16dp"
+                    app:iconTint="@color/brand_gold" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/style_rewards_button"
-                style="@style/Widget.Material3.Button"
-                android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginBottom="12dp"
-                android:gravity="start|center_vertical"
-                android:text="Style Rewards"
-                android:textAppearance="?attr/textAppearanceTitleMedium"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                app:backgroundTint="@color/primary_navy"
-                app:cornerRadius="16dp"
-                app:icon="@drawable/ic_cart"
-                app:iconPadding="16dp"
-                app:iconTint="#FFFFFF" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/order_history_button"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="start|center_vertical"
+                    android:text="Order History"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_home"
+                    app:iconPadding="16dp"
+                    app:iconTint="@color/brand_gold" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/style_quiz_button"
-                style="@style/Widget.Material3.Button"
-                android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginBottom="12dp"
-                android:gravity="start|center_vertical"
-                android:text="Style Quiz"
-                android:textAppearance="?attr/textAppearanceTitleMedium"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                app:backgroundTint="@color/primary_navy"
-                app:cornerRadius="16dp"
-                app:icon="@drawable/ic_shirt"
-                app:iconPadding="16dp"
-                app:iconTint="#FFFFFF" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/style_rewards_button"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="start|center_vertical"
+                    android:text="Style Rewards"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_cart"
+                    app:iconPadding="16dp"
+                    app:iconTint="@color/brand_gold" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/payment_methods_button"
-                style="@style/Widget.Material3.Button"
-                android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginBottom="12dp"
-                android:gravity="start|center_vertical"
-                android:text="Payment Methods"
-                android:textAppearance="?attr/textAppearanceTitleMedium"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                app:backgroundTint="@color/primary_navy"
-                app:cornerRadius="16dp"
-                app:icon="@drawable/ic_cart"
-                app:iconPadding="16dp"
-                app:iconTint="#FFFFFF" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/style_quiz_button"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="start|center_vertical"
+                    android:text="Style Quiz"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_shirt"
+                    app:iconPadding="16dp"
+                    app:iconTint="@color/brand_gold" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/admin_dashboard_button"
-                style="@style/Widget.Material3.Button"
-                android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:gravity="start|center_vertical"
-                android:text="Admin Dashboard"
-                android:textAppearance="?attr/textAppearanceTitleMedium"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                app:backgroundTint="@color/primary_navy"
-                app:cornerRadius="16dp"
-                app:icon="@drawable/ic_profile"
-                app:iconPadding="16dp"
-                app:iconTint="#FFFFFF" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/payment_methods_button"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="start|center_vertical"
+                    android:text="Payment Methods"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_cart"
+                    app:iconPadding="16dp"
+                    app:iconTint="@color/brand_gold" />
 
-        </LinearLayout>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/admin_dashboard_button"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="start|center_vertical"
+                    android:text="Admin Dashboard"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_profile"
+                    app:iconPadding="16dp"
+                    app:iconTint="@color/brand_gold" />
 
-        <!-- Preferences Section - White Card -->
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Preferences Card - Dark Mode Compatible -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/settings_card"
             style="?attr/materialCardViewElevatedStyle"
@@ -261,9 +248,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="16dp"
-            app:cardBackgroundColor="#FFFFFF"
+            app:cardBackgroundColor="@color/primary_navy_light"
             app:cardCornerRadius="24dp"
-            app:layout_constraintTop_toBottomOf="@id/menu_container"
+            app:layout_constraintTop_toBottomOf="@id/menu_card"
             app:strokeWidth="0dp">
 
             <LinearLayout
@@ -278,7 +265,7 @@
                     android:layout_marginBottom="12dp"
                     android:text="App Preferences"
                     android:textAppearance="?attr/textAppearanceTitleSmall"
-                    android:textColor="@color/primary_navy"
+                    android:textColor="#FFFFFF"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -293,7 +280,7 @@
                         android:layout_weight="1"
                         android:text="Dark Mode"
                         android:textAppearance="?attr/textAppearanceTitleMedium"
-                        android:textColor="@color/primary_navy"
+                        android:textColor="#FFFFFF"
                         android:textStyle="bold" />
 
                     <com.google.android.material.materialswitch.MaterialSwitch
@@ -306,6 +293,7 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- Logout Button -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/logout_button"
             style="@style/Widget.Material3.Button"
@@ -313,7 +301,7 @@
             android:layout_height="60dp"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="32dp"
-            android:backgroundTint="#D93025"
+            android:backgroundTint="?attr/colorError"
             android:text="Logout"
             android:textColor="#FFFFFF"
             android:textStyle="bold"

@@ -53,7 +53,7 @@ public class ProductRepository {
         products.add(new Product("Executive Navy Blazer", CATEGORY_WOMEN, 6800, "Classic navy blue blazer.", R.drawable.b1, true, "S"));
         products.add(new Product("Slim Fit Charcoal Blazer", CATEGORY_WOMEN, 6200, "Modern charcoal blazer.", R.drawable.b2, false, "L"));
         products.add(new Product("Vintage Tweed Blazer", CATEGORY_WOMEN, 5800, "Classic tweed blazer.", R.drawable.b3, false, "M"));
-        products.add(new Product("Modern Utility Jacket", CATEGORY_WOMEN, 5200, "Functional jacket for all seasons.", R.drawable.j1, true, "M"));
+        products.add(new Product("Modern Black Utility Jacket", CATEGORY_WOMEN, 5200, "Functional black jacket for all seasons.", R.drawable.j1, true, "M"));
         products.add(new Product("Summer Floral Dress", CATEGORY_WOMEN, 4500, "Lightweight floral dress.", R.drawable.summerfloral, true, "S"));
         products.add(new Product("Vibrant Floral Summer Dress", CATEGORY_WOMEN, 4800, "Colorful floral pattern.", R.drawable.summerfloral1, false, "M"));
         products.add(new Product("Evening Silk Gown", CATEGORY_WOMEN, 7500, "Elegant silk gown.", R.drawable.evesilk, false, "L"));

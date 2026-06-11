@@ -39,6 +39,9 @@
         <action
             android:id="@+id/action_cart_to_checkout"
             app:destination="@id/checkoutFragment" />
+        <action
+            android:id="@+id/action_cart_to_savedDetails"
+            app:destination="@id/savedDetailsFragment" />
     </fragment>
 
     <fragment
@@ -64,6 +67,9 @@
         <action
             android:id="@+id/action_profile_to_wishlist"
             app:destination="@id/navigation_wishlist" />
+        <action
+            android:id="@+id/action_profile_to_savedDetails"
+            app:destination="@id/savedDetailsFragment" />
     </fragment>
 
     <fragment
@@ -98,7 +104,11 @@
         android:id="@+id/loginFragment"
         android:name="com.example.stylenestboutique.ui.auth.LoginFragment"
         android:label="Login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_savedDetails"
+            app:destination="@id/savedDetailsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/adminDashboardFragment"
@@ -115,4 +125,20 @@
         android:name="com.example.stylenestboutique.ui.admin.AddProductFragment"
         android:label="Add Product"
         tools:layout="@layout/fragment_add_product" />
+
+    <fragment
+        android:id="@+id/savedDetailsFragment"
+        android:name="com.example.stylenestboutique.ui.profile.SavedDetailsFragment"
+        android:label="Saved Details"
+        tools:layout="@layout/fragment_saved_details">
+        <action
+            android:id="@+id/action_savedDetails_to_map"
+            app:destination="@id/mapFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.stylenestboutique.ui.profile.MapFragment"
+        android:label="Select Location"
+        tools:layout="@layout/fragment_map" />
 </navigation>

@@ -76,7 +76,7 @@ public class ProfileFragment extends Fragment {
         binding.styleQuizButton.setOnClickListener(v -> startStyleQuiz());
 
         binding.paymentMethodsButton.setOnClickListener(v -> 
-            showComingSoon("Payment Methods", "Securely manage your credit cards and mobile money."));
+            Navigation.findNavController(v).navigate(R.id.action_profile_to_savedDetails));
 
         binding.adminDashboardButton.setOnClickListener(v -> 
             Navigation.findNavController(v).navigate(R.id.action_profile_to_admin));

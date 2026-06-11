@@ -41,7 +41,8 @@ public class LoginFragment extends Fragment {
         });
 
         binding.signupButton.setOnClickListener(v -> {
-            Toast.makeText(getContext(), "Signup feature coming soon!", Toast.LENGTH_SHORT).show();
+            // Navigate to register details as requested
+            Navigation.findNavController(v).navigate(R.id.action_login_to_savedDetails);
         });
     }
 

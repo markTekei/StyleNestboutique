@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorSurface">
+    android:background="@color/app_background">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -26,32 +26,33 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.LargeComponent" />
 
-            <ImageButton
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/share_button"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_margin="16dp"
-                android:background="@drawable/ic_categories"
-                android:backgroundTint="#80000000"
-                android:padding="12dp"
-                android:src="@drawable/ic_search"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/share_product"
+                android:src="@android:drawable/ic_menu_share"
+                app:backgroundTint="@color/white"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="@id/wishlist_fab"
+                app:layout_constraintEnd_toStartOf="@id/wishlist_fab"
+                app:layout_constraintTop_toTopOf="@id/wishlist_fab"
+                app:tint="@color/brand_sage" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/wishlist_fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="24dp"
-                android:contentDescription="Add to wishlist"
+                android:contentDescription="@string/wishlist"
                 android:src="@drawable/ic_dress"
-                app:backgroundTint="?attr/colorSurface"
+                app:backgroundTint="@color/white"
                 app:fabSize="normal"
                 app:layout_constraintBottom_toTopOf="@id/detail_card"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/detail_card"
-                app:tint="?attr/colorPrimary" />
+                app:tint="@color/brand_sage" />
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/detail_card"
@@ -60,6 +61,7 @@
                 android:layout_marginTop="-32dp"
                 app:cardCornerRadius="32dp"
                 app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/app_background"
                 app:layout_constraintTop_toBottomOf="@id/product_image"
                 app:strokeWidth="0dp">
 
@@ -75,7 +77,7 @@
                         android:layout_height="wrap_content"
                         android:text="Premium Urban Shirt"
                         android:textAppearance="?attr/textAppearanceHeadlineSmall"
-                        android:textColor="?attr/colorOnSurface"
+                        android:textColor="@color/text_charcoal"
                         android:textStyle="bold" />
 
                     <TextView
@@ -85,21 +87,21 @@
                         android:layout_marginTop="8dp"
                         android:text="KES 4,500"
                         android:textAppearance="?attr/textAppearanceTitleLarge"
-                        android:textColor="?attr/colorPrimary"
+                        android:textColor="@color/brand_sage_dark"
                         android:textStyle="bold" />
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginVertical="20dp"
-                        android:background="?attr/colorOutlineVariant" />
+                        android:background="@color/gray_light" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Description"
                         android:textAppearance="?attr/textAppearanceTitleMedium"
-                        android:textColor="?attr/colorOnSurface"
+                        android:textColor="@color/text_charcoal"
                         android:textStyle="bold" />
 
                     <TextView
@@ -109,15 +111,16 @@
                         android:layout_marginTop="8dp"
                         android:lineSpacingExtra="4dp"
                         android:text="Premium quality fabric with a modern silhouette."
-                        android:textAppearance="?attr/textAppearanceBodyMedium" />
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:textColor="@color/text_charcoal_light" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="24dp"
-                        android:text="Select Size"
+                        android:text="@string/select_size"
                         android:textAppearance="?attr/textAppearanceTitleMedium"
-                        android:textColor="?attr/colorOnSurface"
+                        android:textColor="@color/text_charcoal"
                         android:textStyle="bold" />
 
                     <com.google.android.material.chip.ChipGroup
@@ -132,7 +135,8 @@
                             style="@style/Widget.Material3.Chip.Filter"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="S" />
+                            android:text="S"
+                            app:chipBackgroundColor="@color/warm_sand_dark" />
 
                         <com.google.android.material.chip.Chip
                             android:id="@+id/chip_m"
@@ -140,21 +144,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:checked="true"
-                            android:text="M" />
+                            android:text="M"
+                            app:chipBackgroundColor="@color/warm_sand_dark" />
 
                         <com.google.android.material.chip.Chip
                             android:id="@+id/chip_l"
                             style="@style/Widget.Material3.Chip.Filter"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="L" />
+                            android:text="L"
+                            app:chipBackgroundColor="@color/warm_sand_dark" />
 
                         <com.google.android.material.chip.Chip
                             android:id="@+id/chip_xl"
                             style="@style/Widget.Material3.Chip.Filter"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="XL" />
+                            android:text="XL"
+                            app:chipBackgroundColor="@color/warm_sand_dark" />
                     </com.google.android.material.chip.ChipGroup>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -172,7 +179,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorSurface"
+            android:background="@color/app_background"
             android:padding="16dp">
 
             <com.google.android.material.button.MaterialButton
@@ -181,6 +188,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="@string/add_to_cart"
+                android:backgroundTint="@color/accent_terracotta"
+                android:textColor="@color/white"
                 app:cornerRadius="16dp" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>

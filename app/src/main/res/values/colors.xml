@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Premium Midnight & Gold Palette -->
-    <color name="primary_navy">#1A2238</color>
-    <color name="primary_navy_dark">#0F1421</color>
-    <color name="primary_navy_light">#2A334D</color>
+    <!-- Sage & Terracotta Palette (Sage Green Trendy Style) -->
 
-    <color name="brand_gold">#D4AF37</color> <!-- Champagne Gold -->
-    <color name="brand_gold_light">#E8D196</color>
-    <color name="brand_gold_dark">#996515</color>
+    <!-- Primary Brand: Sage Green -->
+    <color name="brand_sage">#8A9A5B</color>
+    <color name="brand_sage_dark">#556B2F</color>
+    <color name="brand_sage_light">#A3B080</color>
 
-    <!-- Neutrals -->
-    <color name="black">#000000</color>
+    <!-- Neutral Base: Warm Sand -->
+    <color name="app_background">#FDFBF7</color>
+    <color name="warm_sand_dark">#F5F0E6</color>
+    <color name="off_white">#FAFAFA</color>
+
+    <!-- Text/Accents: Deep Charcoal -->
+    <color name="text_charcoal">#36454F</color>
+    <color name="text_charcoal_light">#546E7A</color>
+    <color name="charcoal">#36454F</color>
+
+    <!-- Call to Action: Terracotta -->
+    <color name="accent_terracotta">#E2725B</color>
+    <color name="accent_terracotta_dark">#BF4F36</color>
+
+    <!-- Basic Colors -->
     <color name="white">#FFFFFF</color>
-    <color name="white_pure">#FFFFFF</color>
-    <color name="off_white">#F5F5F5</color>
-    <color name="background_cream">#FDFCF0</color>
+    <color name="black">#000000</color>
+    <color name="gray_light">#E0E0E0</color>
+    <color name="sale_red">#D32F2F</color>
 
-    <color name="charcoal">#121212</color>
-    <color name="surface_dark">#1E1E1E</color>
-    <color name="gray_dark">#424242</color>
-    <color name="gray_light">#BDBDBD</color>
-
-    <!-- Text -->
-    <color name="text_main">#1A2238</color>
-    <color name="text_secondary">#757575</color>
-
-    <!-- Functional -->
-    <color name="sale_red">#B71C1C</color>
-    <color name="success_green">#2E7D32</color>
+    <!-- Legacy compatibility -->
+    <color name="primary_navy">#36454F</color>
+    <color name="primary_navy_dark">#2A334D</color>
+    <color name="primary_navy_light">#546E7A</color>
+    <color name="brand_gold">#E2725B</color>
+    <color name="brand_gold_light">#F1A18F</color>
+    <color name="brand_gold_dark">#BF4F36</color>
 </resources>

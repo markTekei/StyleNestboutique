@@ -1,27 +1,29 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Premium High-Visibility Light Theme -->
+    <!-- StyleNest Boutique: Sage & Terracotta Theme -->
     <style name="Base.Theme.StyleNestBoutique" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Brand colors -->
-        <item name="colorPrimary">#1A2238</item>
-        <item name="colorOnPrimary">#FFFFFF</item>
+        <!-- Primary Brand: Sage Green -->
+        <item name="colorPrimary">@color/brand_sage</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/brand_sage_light</item>
+        <item name="colorOnPrimaryContainer">@color/brand_sage_dark</item>
 
-        <!-- Header & Banner Roles -->
-        <item name="colorPrimaryContainer">#FFFDF5</item> <!-- Luminous White-Gold -->
-        <item name="colorOnPrimaryContainer">#1A2238</item>
+        <!-- Secondary/CTA: Terracotta -->
+        <item name="colorSecondary">@color/accent_terracotta</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/accent_terracotta_dark</item>
+        <item name="colorOnSecondaryContainer">@color/white</item>
 
-        <item name="colorSecondary">#D4AF37</item>
-        <item name="colorOnSecondary">#FFFFFF</item>
+        <!-- Background & Surfaces: Warm Sand & Charcoal -->
+        <item name="android:windowBackground">@color/app_background</item>
+        <item name="colorSurface">@color/app_background</item>
+        <item name="colorOnSurface">@color/text_charcoal</item>
+        <item name="colorSurfaceVariant">@color/warm_sand_dark</item>
+        <item name="colorOnSurfaceVariant">@color/text_charcoal_light</item>
 
-        <!-- Surfaces (Max Contrast) -->
-        <item name="android:windowBackground">#F8F9FA</item>
-        <item name="colorSurface">#FFFFFF</item>
-        <item name="colorOnSurface">#000000</item> <!-- Pure Black text -->
-        <item name="colorSurfaceVariant">#F1F3F4</item>
-        <item name="colorOnSurfaceVariant">#202124</item> <!-- Very dark gray -->
-        <item name="colorOutline">#D4AF37</item>
-        <item name="colorError">#D93025</item>
+        <item name="colorOutline">@color/brand_sage_dark</item>
+        <item name="colorError">@color/sale_red</item>
 
-        <!-- Components -->
+        <!-- Components Branding -->
         <item name="materialButtonStyle">@style/StyleNest.Button</item>
         <item name="chipStyle">@style/StyleNest.Chip</item>
     </style>
@@ -30,21 +32,22 @@
 
     <!-- Splash Screen Theme -->
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/primary_navy</item>
+        <item name="windowSplashScreenBackground">@color/brand_sage</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
         <item name="postSplashScreenTheme">@style/Theme.StyleNestBoutique</item>
     </style>
 
     <style name="StyleNest.Button" parent="Widget.Material3.Button">
-        <item name="android:backgroundTint">?attr/colorPrimary</item>
-        <item name="android:textColor">?attr/colorOnPrimary</item>
-        <item name="cornerRadius">8dp</item>
+        <item name="android:backgroundTint">@color/brand_sage</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">12dp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="StyleNest.Chip" parent="Widget.Material3.Chip.Assist">
-        <item name="chipBackgroundColor">?attr/colorSurface</item>
-        <item name="android:textColor">?attr/colorOnSurface</item>
-        <item name="chipIconTint">?attr/colorPrimary</item>
+        <item name="chipBackgroundColor">@color/warm_sand_dark</item>
+        <item name="android:textColor">@color/text_charcoal</item>
+        <item name="chipIconTint">@color/brand_sage</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Medium</item>
     </style>
 </resources>

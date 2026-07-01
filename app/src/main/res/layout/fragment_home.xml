@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorSurface"
+    android:background="@color/app_background"
     android:clipToPadding="false"
     android:paddingBottom="16dp">
 
@@ -21,7 +21,7 @@
             android:layout_marginTop="24dp"
             android:text="@string/welcome_title"
             android:textAppearance="?attr/textAppearanceTitleLarge"
-            android:textColor="?attr/colorOnSurface"
+            android:textColor="@color/text_charcoal"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -34,7 +34,7 @@
             android:layout_marginTop="4dp"
             android:text="@string/welcome_subtitle"
             android:textAppearance="?attr/textAppearanceBodyMedium"
-            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textColor="@color/text_charcoal_light"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/welcome_text" />
 
@@ -49,8 +49,10 @@
             app:hintEnabled="false"
             app:layout_constraintTop_toBottomOf="@id/subtitle_text"
             app:startIconDrawable="@drawable/ic_search"
-            app:startIconTint="?attr/colorPrimary"
-            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.MediumComponent">
+            app:startIconTint="@color/brand_sage"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.MediumComponent"
+            app:boxStrokeColor="@color/brand_sage"
+            app:hintTextColor="@color/brand_sage">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/search_edit_text"
@@ -58,7 +60,8 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/search_hint"
                 android:inputType="text"
-                android:padding="12dp" />
+                android:padding="12dp"
+                android:textColor="@color/text_charcoal" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Horizontal Categories -->
@@ -73,7 +76,7 @@
             app:layout_constraintTop_toBottomOf="@id/search_layout"
             tools:listitem="@layout/item_category_chip" />
 
-        <!-- Modern Promotional Banner - Premium Styled -->
+        <!-- Modern Promotional Banner - Sage Styled -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/banner_card"
             style="?attr/materialCardViewElevatedStyle"
@@ -85,12 +88,12 @@
             app:cardElevation="8dp"
             app:layout_constraintTop_toBottomOf="@id/categories_chip_recycler"
             app:strokeWidth="1dp"
-            app:strokeColor="@color/brand_gold">
+            app:strokeColor="@color/brand_sage">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/primary_navy_dark">
+                android:background="@color/brand_sage_dark">
 
                 <ImageView
                     android:id="@+id/banner_logo_icon"
@@ -101,7 +104,7 @@
                     android:src="@drawable/ic_logo"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/brand_gold" />
+                    app:tint="@color/app_background" />
 
                 <TextView
                     android:id="@+id/banner_title"
@@ -127,7 +130,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:strokeWidth="2dp"
-                    app:strokeColor="@color/brand_gold">
+                    app:strokeColor="@color/brand_sage">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -163,10 +166,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginBottom="20dp"
-                    android:backgroundTint="@color/brand_gold"
+                    android:backgroundTint="@color/accent_terracotta"
                     android:text="@string/shop_now"
                     android:textAllCaps="false"
-                    android:textColor="@color/primary_navy_dark"
+                    android:textColor="@color/white"
                     app:cornerRadius="8dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -183,7 +186,7 @@
             android:layout_marginTop="32dp"
             android:text="@string/new_arrivals"
             android:textAppearance="?attr/textAppearanceTitleMedium"
-            android:textColor="?attr/colorOnSurface"
+            android:textColor="@color/text_charcoal"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/banner_card" />
@@ -201,7 +204,7 @@
             app:layout_constraintBottom_toBottomOf="@id/section_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/section_title"
-            app:tint="?attr/colorPrimary" />
+            app:tint="@color/brand_sage" />
 
         <!-- Product Grid -->
         <androidx.recyclerview.widget.RecyclerView

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorSurface"
+    android:background="@color/app_background"
     android:padding="32dp">
 
     <ImageView
@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="?attr/colorPrimary" />
+        app:tint="@color/brand_sage" />
 
     <TextView
         android:id="@+id/title"
@@ -26,7 +26,7 @@
         android:text="Welcome to STYLENEST"
         android:textAppearance="?attr/textAppearanceHeadlineSmall"
         android:textStyle="bold"
-        android:textColor="?attr/colorOnSurface"
+        android:textColor="@color/text_charcoal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo" />
@@ -38,7 +38,7 @@
         android:layout_marginTop="8dp"
         android:text="Sign in to continue your style journey"
         android:textAppearance="?attr/textAppearanceBodyMedium"
-        android:textColor="?attr/colorOnSurfaceVariant"
+        android:textColor="@color/text_charcoal_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title" />
@@ -50,13 +50,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:hint="Email"
+        app:boxStrokeColor="@color/brand_sage"
+        app:hintTextColor="@color/brand_sage"
         app:layout_constraintTop_toBottomOf="@id/subtitle">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textColor="@color/text_charcoal" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -67,13 +70,17 @@
         android:layout_marginTop="16dp"
         android:hint="Password"
         app:endIconMode="password_toggle"
+        app:endIconTint="@color/brand_sage"
+        app:boxStrokeColor="@color/brand_sage"
+        app:hintTextColor="@color/brand_sage"
         app:layout_constraintTop_toBottomOf="@id/email_layout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textColor="@color/text_charcoal" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
@@ -82,9 +89,9 @@
         android:layout_height="56dp"
         android:layout_marginTop="40dp"
         android:text="Login"
-        android:textColor="?attr/colorOnPrimary"
+        android:textColor="@color/white"
         android:textStyle="bold"
-        app:backgroundTint="?attr/colorPrimary"
+        app:backgroundTint="@color/brand_sage"
         app:cornerRadius="12dp"
         app:layout_constraintTop_toBottomOf="@id/password_layout" />
 
@@ -95,7 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="Don't have an account? Sign Up"
-        android:textColor="?attr/colorPrimary"
+        android:textColor="@color/accent_terracotta"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/login_button" />
 
